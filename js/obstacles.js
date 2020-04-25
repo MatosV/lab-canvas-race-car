@@ -1,16 +1,25 @@
 class Game {
-  constructor(game){
-    this.game = game;
+  constructor(game, x, y){
+      this.game = game;
+      this.x = x;
+      this.y = y; 
+      
+      this.speed = 1;
 
-    this.placeRandom();
+      this.width = 25;
+      this.height = 25;
+  }
+  
+
+  speed(){
+    this.x -= this.speed;
   }
 
-  //RANDOM OBSTACLES
-  placeRandom() {
-    let x = Math.floor(Math.random() * );
-
-    this.x = x;
-    //this.y = y;
+  draw(){
+    this.game.context.fillRect(this.x - this.width / 2, 
+      this.y - this.height / 2, 
+      this.width, 
+      this.height
+      );
   }
-
 }

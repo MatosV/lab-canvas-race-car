@@ -36,3 +36,20 @@ body button {
     float: left;
     padding: 20px 0px;
 }
+
+/*MY CSS*/
+
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  padding: 0 1em;
+}
+
+.game-group{
+  display: flex;
+  flex-flow: row wrap;
+}
+

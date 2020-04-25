@@ -4,11 +4,13 @@ class Score {
   }
 
   draw(){
-    const context = this.games.context;
-    const score = this.games.score;
+    const context = this.game.context;
+    const score = this.game.score;
 
-    context.fillStyle = 'black';
-    context.fillText{`${score} Points`, 50, this.game.$canvas.height -50};
+    console.log(score);
+
+    context.font = '1em sans-serif';
+
+    context.fillText(`${score} Points`, 50, this.game.$canvas.height -50);
   }
-
 } 
