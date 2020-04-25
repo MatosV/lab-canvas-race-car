@@ -1,30 +1,15 @@
 class Car {
-  constructor(game, x ,y ){
+  constructor(game){
     this.game = game;
-
-    this.x = x;
-    this.y = y;
+    this.context = game.context;
   }
 
   draw(){
-
-  }
-
-  colision(){
-    const obstacles = this.game.obstacles;    
-  }
-
-  move() {
-    switch (this.direction){
-      case 'left':
-        this.x--;
-        console.log('moving left');
-        break;
-      case 'right':
-        this.x++;
-        console.log('moving right');
-        break;
-    }
+    let imgCar = new Image();
+    imgCar.src = "/images/car.png";
+    const imgHeight = imgHeight.height;
+    const imgWidth = imgWidth.width;
+    //this.context.drawImage(imgCar)
   }
 
 }

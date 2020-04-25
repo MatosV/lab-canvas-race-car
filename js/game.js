@@ -2,6 +2,9 @@ class Game {
   constructor($canvas){
     this.$canvas = $canvas;
     this.context = $canvas.getContext('2d');
+
+    this.x = $canvas.width;
+    this.y = $canvas.height;
     
     this.score = new Score(this);
     this.background = new Background(this);
@@ -39,8 +42,8 @@ class Game {
   }
 
   clearAll () {
-    this.context.clearRect(0, 0, this.$canvas.width, 
-      this.$canvas.height);
+    this.context.clearRect(0, 0, this.y, 
+      this.x);
   }
 
   draw() {

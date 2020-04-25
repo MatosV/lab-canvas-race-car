@@ -1,4 +1,4 @@
-class Game {
+class Obstacles {
   constructor(game, x, y){
       this.game = game;
       this.x = x;
