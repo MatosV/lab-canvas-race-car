@@ -20,30 +20,28 @@ class Game {
   }
 
   start() {
-    this.clearAll();
+    //this.clearAll();
 
     this.background.draw(this);
     this.car.draw(this);
+    this.car.moveLeft();
+    this.car.moveRight();
   }
   
 
   setKeyBeiding () {
     window.addEventListener('keydown', (event) =>{
-      
-      const keyCode = event.keyCode;
+      event.preventDefault();
 
+      const keyCode = event.keyCode;
       switch (keyCode) {
         //TURN LEFT
-        case 37:
-          // preventDefault() => default action should not be taken as it normally would be
-          event.preventDefault();
-          this.car = 'left';
+        case 37:          
+          this.car.moveLeft();
           console.log('turn left');
           break;
-        case 39:
-          // preventDefault() => default action should not be taken as it normally would be
-          event.preventDefault();
-          this.car = 'right';
+        case 39:          
+          this.car.moveRight();
           console.log('turn right');
           break;
       }
